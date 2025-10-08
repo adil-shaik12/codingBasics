@@ -5,3 +5,8 @@ using namespace std;
 int output(){
     cout<<'output';
 }
+
+int main(){
+    output();
+    return 0;
+}
