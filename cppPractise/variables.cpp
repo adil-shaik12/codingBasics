@@ -4,13 +4,14 @@ using namespace std;
 
 int main(){
     int num=10;
-    cout<<num;
+    cout<<num <<"\n";
     char ch='a';
-    cout<<ch;   
+    cout<<ch <<"\n";   
     string str="hello";
-    cout<<str;
-    int x,y,z=10;
-    cout<<x<<y<<z;
+    cout<<str <<"\n";
+    int x,y,z;
+    x=y=z=10;
+    cout<<x + y + z;
 
     return 0;
 }
