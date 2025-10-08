@@ -1,4 +1,4 @@
-//code for arthimetic operators
+//code for arithmetic operators
 #include<iostream>
 using namespace std;
 int main(){
