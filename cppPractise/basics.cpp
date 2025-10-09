@@ -31,10 +31,33 @@ int inputStudentData(){
     cout<<name<<" "<<age<<" "<<studentId<<" "<<rollNo;
     return 0;
 }
+// the below code is dataTypes
+int dataTypes(){
+    int num;
+    float fee;
+    bool flag=true;
+    string name;
+    char sec;
+    double data;
+    cout<<"the num is:";
+    cin>>num;
+    cout<<"thr fee is:";
+    cin>>fee;
+    cout<<flag<<"\n";
+    cout<<"the name is:";
+    cin>>name;
+    cout<<"sec is:";
+    cin>>sec;
+    cout<<"the data is:";
+    cin>>data;
+    cout<<num<<" "<<fee<<" "<<" "<<flag<<" "<<name<<" "<<sec<<" "<<data;
+    return 0;
+}
 
 int main(){
-    output();
-    variables();
-    inputStudentData();
+    // output();
+    // variables();
+    // inputStudentData();
+    dataTypes();
     return 0;
 }
