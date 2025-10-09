@@ -95,7 +95,36 @@ int logical(){
     cout<<(x!=20);
     return 0;
 }
-
+//the below code is about strings
+int name(){
+    string name="adil";
+    cout<<"my name is:"<<name;
+    return 0;
+}
+//the below code is for concatenation
+int concat(){
+    string fname="shaik";
+    string sname="mahammad";
+    string tname="adil";
+    cout<<fname<<" "+sname<<" "+tname;
+    return 0;
+}
+//code using append function
+int append(){
+    string fname="adil";
+    string sname="shaik";
+    fname.append(sname);
+    cout<<fname;
+    return 0;
+}
+//the code is for adding numbers in strings
+int stringnum(){
+    string a="10";
+    string b="10";
+    a=a+b;
+    cout<<a;
+    return 0;
+}
 
 int main(){
     output();
@@ -106,5 +135,9 @@ int main(){
     assignment();
     comparison();
     logical();
+    name();
+    concat();
+    append();
+    stringnum();
     return 0;
 }
