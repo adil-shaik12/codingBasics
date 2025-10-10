@@ -125,6 +125,17 @@ int stringnum(){
     cout<<a;
     return 0;
 }
+//the below code is for accessing strings,length and by using special characters
+int length(){
+    string txt="bhfbdhsgchsgdhcbh";
+    string nm="character";
+    string spe="my name is\"adil\"and i am from\\proddatur\\in \'kadapa'";
+    cout<<txt.size();
+    cout<<nm[0];
+    cout<<spe;
+    return 0;
+}
+
 
 int main(){
     output();
@@ -139,5 +150,6 @@ int main(){
     concat();
     append();
     stringnum();
+    length();
     return 0;
 }
