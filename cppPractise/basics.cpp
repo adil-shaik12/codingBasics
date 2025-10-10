@@ -135,6 +135,25 @@ int length(){
     cout<<spe;
     return 0;
 }
+//the below code is for user input string
+int input(){
+    string str;
+    cout<<"type your name:";
+    cin>>str;
+    cout<<"your full name is:";
+    return 0;
+}
+//the below code is fro user input string using getline() method
+int get(){
+    string var;
+    cout<<"type your name:";
+    getline (cin,var);
+    cout<<"your full name is:"<<var;
+    return 0;
+}
+
+
+
 
 
 int main(){
@@ -151,5 +170,7 @@ int main(){
     append();
     stringnum();
     length();
+    input();
+    get();
     return 0;
 }
