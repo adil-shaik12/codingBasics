@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 // the below code is for output
@@ -151,7 +152,14 @@ int get(){
     cout<<"your full name is:"<<var;
     return 0;
 }
-
+//the below code is for math using cmath header file
+int cmath(){
+    cout<<"square root of 49 is:"<<sqrt(49);
+    cout<<"round of a number 2.8 is :"<<round(2.8);
+    cout<<"natural logarithm of 3 is:"<<log(3);
+    cout<<"power of 2,3 is:"<<pow(2,3);
+    return 0;
+}
 
 
 
@@ -172,5 +180,6 @@ int main(){
     length();
     input();
     get();
+    cmath();
     return 0;
 }
