@@ -160,9 +160,50 @@ int cmath(){
     cout<<"power of 2,3 is:"<<pow(2,3);
     return 0;
 }
+//the below code is ofr using statements
+int statement(){
+    int x=10;
+    int y=20;
+    if(x<y){
+        cout<<"x is lessthan y";
+    }
+    else if(x<=y){
+        cout<<"x is equal to y";
+    }
+    
+    else{
+        cout<<"x is greater than y";
+    }
 
-
-
+}
+//the below code is for switch statement
+int switchStatement(){
+    int day=4;
+    switch (day){
+        case 1:
+        cout<<"monday";
+        break;
+        case 2:
+        cout<<"tuesday";
+        break;
+        case 3:
+        cout<<"wednesday";
+        break;
+        case 4:
+        cout<<"thursday";
+        break;
+        case 5:
+        cout<<"friday";
+        break;
+        case 6:
+        cout<<"saturday";
+        break;
+        case 7:
+        cout<<"sunday";
+        break;
+        return 0;
+    }
+}
 
 int main(){
     output();
@@ -181,5 +222,7 @@ int main(){
     input();
     get();
     cmath();
+    statement();
+    switchStatement();
     return 0;
 }
