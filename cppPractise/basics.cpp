@@ -114,7 +114,8 @@ int concat(){
 int append(){
     string fname="adil";
     string sname="shaik";
-    fname.append(sname);
+    string tname="mahammad";
+    fname.append(sname).append(tname);
     cout<<fname;
     return 0;
 }
@@ -128,9 +129,18 @@ int stringnum(){
 }
 //the below code is for accessing strings,length and by using special characters
 int length(){
-    string txt="bhfbdhsgchsgdhcbh";
+    string txt="adilghcydgdgcbhdcgg";
     string nm="character";
     string spe="my name is\"adil\"and i am from\\proddatur\\in \'kadapa'";
+    int len=10;
+    
+    int a=txt.length();
+    if(a>10){
+        cout<<"string is big";
+    }
+    else{
+        cout<<"string is small";
+    }
     cout<<txt.size();
     cout<<nm[0];
     cout<<spe;
@@ -168,7 +178,7 @@ int statement(){
         cout<<"x is lessthan y";
     }
     else if(x<=y){
-        cout<<"x is equal to y";
+        cout<<"x is lessthan or equal to y";
     }
     
     else{
@@ -178,7 +188,9 @@ int statement(){
 }
 //the below code is for switch statement
 int switchStatement(){
-    int day=4;
+    int day;
+    cout<<"enter the day number";
+    cin>>day;
     switch (day){
         case 1:
         cout<<"monday";
@@ -204,6 +216,76 @@ int switchStatement(){
         return 0;
     }
 }
+//the below code is for while and do/while loop
+int loop(){
+    int i=0;
+    while (i<10){
+        cout<<i<<"\n";
+        i++;
+    }
+}
+int doWhile(){
+    int i=0;
+    do{
+        cout<<i<<"\n";
+        i++;
+    }
+    while(i<=10);
+    return 0;
+}
+int forLoop(){
+    int i=10;
+    for(i=0;i<=10;i++){
+        if(i=0){
+            cout<<"the value is 0";
+        }
+        if(i=1){
+            cout<<"the value is 1";
+        }
+        cout<<i<<"/n";
+
+    }
+}
+
+//the below code is for arrays
+
+int arrayForloop(){
+    int n;
+    int num[n];
+    int i;
+    
+    cout<<"enter the size of array";
+    cin>>n;
+    for(i=0;i<5;i++){
+        int j;
+        cout<<"enter"<<i<<"number";
+        cin>>j;
+        num[i]=j;
+}
+    for(int j=0;j<5;j++){
+        cout<<num[j];
+    }
+}
+int arrayForeachloop(){
+    int n;
+    cin>>n;
+    int num[n];
+    int i;
+    
+    cout<<"enter the size of array";
+    
+    for(int i:num){
+        int j;
+        cout<<"enter"<<i<<"number";
+        cin>>j;
+        num[i]=j;
+}
+    for(int j:num){
+        cout<<num[j];
+    }
+}
+
+
 
 int main(){
     output();
@@ -224,5 +306,16 @@ int main(){
     cmath();
     statement();
     switchStatement();
+    loop();
+    doWhile();
+    forLoop();
+    arrayForloop();
+    arrayForeachloop();
     return 0;
 }
+
+
+
+
+
+
