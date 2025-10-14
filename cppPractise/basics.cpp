@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <vector>
 using namespace std;
 
 // the below code is for output
@@ -226,6 +227,27 @@ int switchStatement()
     }
 }
 
+// the below code is for while and do/while loop
+int loop()
+{
+    int i = 0;
+    while (i < 10)
+    {
+        cout << i << "\n";
+        i++;
+    }
+}
+int doWhile()
+{
+    int i = 0;
+    do
+    {
+        cout << i << "\n";
+        i++;
+    } while (i <= 10);
+    return 0;
+}
+
 int arrayForLoop()
 {
     int n;
@@ -241,6 +263,73 @@ int arrayForLoop()
         cout << arr[i] << " ";
     }
     return 0;
+}
+int forLoop()
+{
+    int i = 10;
+    for (i = 0; i <= 10; i++)
+    {
+        if (i = 0)
+        {
+            cout << "the value is 0";
+        }
+        if (i = 1)
+        {
+            cout << "the value is 1";
+        }
+        cout << i << "/n";
+    }
+}
+
+// the below code is for arrays
+
+int arrayForloop()
+{
+    int n;
+    int num[n];
+    int i;
+
+    cout << "enter the size of array";
+    cin >> n;
+    for (i = 0; i < 5; i++)
+    {
+        int j;
+        cout << "enter" << i << "number";
+        cin >> j;
+        num[i] = j;
+    }
+    for (int j = 0; j < 5; j++)
+    {
+        cout << num[j];
+    }
+}
+int arrayForeachloop()
+{
+
+    string my[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+
+    for (string string : my)
+    {
+        cout << string << "\n";
+    }
+    return 0;
+}
+// the below code is for arrays
+int array()
+{
+    int num[5];
+    cout << sizeof(num);
+    return 0;
+}
+
+int arrayVector()
+{
+    vector<string> name = {"adil", "shaik", "mahammad"};
+    name.push_back("cse");
+    for (string a : name)
+    {
+        cout << a << "\n";
+    }
 }
 
 int main()
@@ -263,5 +352,12 @@ int main()
     cmath();
     statement();
     switchStatement();
+    loop();
+    doWhile();
+    forLoop();
+    arrayForloop();
+    arrayForeachloop();
+    array();
+    arrayVector();
     return 0;
 }
