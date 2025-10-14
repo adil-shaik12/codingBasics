@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include<vector>        
 using namespace std;
 
 // the below code is for output
@@ -267,23 +268,30 @@ int arrayForloop(){
     }
 }
 int arrayForeachloop(){
-    int n;
-    cin>>n;
-    int num[n];
-    int i;
-    
-    cout<<"enter the size of array";
-    
-    for(int i:num){
-        int j;
-        cout<<"enter"<<i<<"number";
-        cin>>j;
-        num[i]=j;
+  
+  string my[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
+  
+  for (string string : my) 
+  {
+    cout << string<< "\n";
+  }
+  return 0;
 }
-    for(int j:num){
-        cout<<num[j];
+//the below code is for arrays
+int array(){
+    int num[5];
+    cout<<sizeof(num);
+    return 0;
+}
+int arrayVector(){
+    vector<string>name={"adil","shaik","mahammad"};
+    name.push_back("cse");
+    for(string a:name){
+        cout<<a<<"\n";
     }
 }
+
+
 
 
 
@@ -311,6 +319,8 @@ int main(){
     forLoop();
     arrayForloop();
     arrayForeachloop();
+    array();
+    arrayVector();
     return 0;
 }
 
