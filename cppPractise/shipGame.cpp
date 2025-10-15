@@ -53,9 +53,37 @@ int sum(){
     cout<<"sum of all elements is"<<sum;
     return 0;
 }
+//the below code is for reversing the elements in an array
+int reverse(){
+    int arr[]={1,2,3,4,5};
+    for(int i=4;i>=0;i--){
+        cout<<arr[i]<<"\n";
+    }
+    return 0;
+}
+//the below code is for finding numbers occuring odd number of times
+int oddNumber(){
+  
+   int arr[]={2,3,5,4,5,2,4,3,5,2,4,4,2};
+    for(int i=0;i<14;i++){
+        int count=0;
+        for(int j=0;j<14;j++){
+            if(arr[i]==arr[j]){
+                count++;
+            }
+        }
+        if(count%2!=0){
+            cout<<arr[i]<<"\n";
+        }
+    }
+    return 0;
+}
+
 int main(){
     shipGame();
     largestElement();
     sum();
+    reverse();
+    oddNumber();
     return 0;
 }
