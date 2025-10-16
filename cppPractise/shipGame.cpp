@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int shipGame(){
     int arr[4][4]=
@@ -29,9 +30,7 @@ while(hits<4){
 cout<<"congrats you have own the game in "<<numberOfturns<<" turns";
 return 0;
 }
-
 //the below code is for finding largest element in an array
-
 int largestElement(){
     int arr[]={2,4,10,8,11};
     int lval=0;
@@ -130,11 +129,28 @@ int namedstructure(){
     cout<<uniData.name<<"\n";
     cout<<uniData.height;
     return 0;
-    
 }
-
-
-
+//the below code is for references
+int reference(){
+    string study="sreeVidya";
+    string &clg=study;
+    cout<<study<<"\n";
+    cout<<clg;
+    return 0;
+}
+int updateRefer(){
+    string study="sreeVidya";
+    string &clg=study;
+    clg="bhavana";
+    cout<<clg<<"\n";
+    cout<<study;
+    return 0;
+}
+int memoryAddress(){
+    string name="adil";
+    cout<<&name;
+    return 0;
+}
 int main(){
     shipGame();
     largestElement();
@@ -143,5 +159,7 @@ int main(){
     structure();
     multinamedstructure();
     namedstructure();
+    reference();
+    updateRefer();
     return 0;
 }
