@@ -61,7 +61,78 @@ int reverse(){
     }
     return 0;
 }
-//the below code is for finding numbers occuring odd number of times
+//the below code is for structure
+int structure(){//this is single variable struct
+    struct{
+        string name;
+        int age;
+        float fee;
+    } studentData;
+    studentData.name="adil";
+    studentData.age=18;
+    studentData.fee=3000.50;
+    cout<<studentData.name<<"\n";
+    cout<<studentData.age<<"\n";
+    cout<<studentData.fee;
+return 0;
+}
+int multinamedstructure(){
+    struct{
+        string book;
+        int pages;
+        float price;
+    } book1,book2,book3;
+    book1.book="java";
+    book1.pages=200;
+    book1.price=300.50;
+    book2.book="python";
+    book2.pages=200;
+    book2.price=300.40;
+    book3.book="c";
+    book3.pages=200;
+    book3.price=200.50;
+    cout<<book1.book<<"\n";
+    cout<<book1.pages<<"\n";
+    cout<<book1.price<<"\n";
+    cout<<book2.book<<"\n";
+    cout<<book2.pages<<"\n";
+    cout<<book2.price<<"\n";
+    cout<<book3.book<<"\n";
+    cout<<book3.pages<<"\n";
+    cout<<book3.price<<"\n";
+return 0;
+}
+int namedstructure(){
+    struct adil{
+        int age;
+        string name;
+        float height;
+    };
+    adil student;
+    student.age=20;
+    student.name="adil";
+    student.height=6.1;
+    adil schoolData;
+    schoolData.age=16;
+    schoolData.name="chaitanya";
+    schoolData.height=5.8;
+    adil uniData;
+    uniData.age=22;
+    uniData.name="cbit";
+    uniData.height=6.0;
+    cout<<student.age<<"\n";
+    cout<<student.name<<"\n";
+    cout<<student.height<<"\n";
+    cout<<schoolData.age<<"\n";
+    cout<<schoolData.name<<"\n";
+    cout<<schoolData.height<<"\n";
+    cout<<uniData.age<<"\n";
+    cout<<uniData.name<<"\n";
+    cout<<uniData.height;
+    return 0;
+    
+}
+
 
 
 int main(){
@@ -69,6 +140,8 @@ int main(){
     largestElement();
     sum();
     reverse();
-    
+    structure();
+    multinamedstructure();
+    namedstructure();
     return 0;
 }
