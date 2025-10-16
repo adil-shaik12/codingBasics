@@ -161,5 +161,6 @@ int main(){
     namedstructure();
     reference();
     updateRefer();
+    memoryAddress();
     return 0;
 }
