@@ -3,7 +3,6 @@
 #include <cmath>
 #include <vector>
 using namespace std;
-
 // the below code is for output
 int output()
 {
@@ -226,7 +225,6 @@ int switchStatement()
         return 0;
     }
 }
-
 // the below code is for while and do/while loop
 int loop()
 {
@@ -247,7 +245,6 @@ int doWhile()
     } while (i <= 10);
     return 0;
 }
-
 int arrayForLoop()
 {
     int n;
@@ -280,15 +277,12 @@ int forLoop()
         cout << i << "/n";
     }
 }
-
 // the below code is for arrays
-
 int arrayForloop()
 {
     int n;
     int num[n];
     int i;
-
     cout << "enter the size of array";
     cin >> n;
     for (i = 0; i < 5; i++)
@@ -305,9 +299,7 @@ int arrayForloop()
 }
 int arrayForeachloop()
 {
-
     string my[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};
-
     for (string string : my)
     {
         cout << string << "\n";
@@ -321,7 +313,6 @@ int array()
     cout << sizeof(num);
     return 0;
 }
-
 int arrayVector()
 {
     vector<string> name = {"adil", "shaik", "mahammad"};
