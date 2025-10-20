@@ -148,6 +148,23 @@ int doWhile(int i)
     } while (i <= 10);
     return 0;
 }
+int forLoop(int  i)
+{
+    for (i = 0; i <= 10; i++)
+    {
+        if (i = 0)
+        {
+            cout << "the value is 0";
+        }
+        if (i = 1)
+        {
+            cout << "the value is 1";
+        }
+        cout << i << "\n";
+        return 0;
+    }
+    return 0;
+}
 int main(){
     sum(20,30);
     sub(20,30);
@@ -166,5 +183,6 @@ int main(){
     switchStatement(3);
     loop(0);
     doWhile(0);
+    forLoop(6);
     return 0;
 }
