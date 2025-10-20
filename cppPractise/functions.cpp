@@ -84,6 +84,23 @@ int length(string txt,string nm,string spe)
     cout << spe<<"\n";
     return 0;
 }
+int statement(int x,int y)
+{
+    if (x < y)
+    {
+        cout << "x is lessthan y";
+    }
+    else if (x <= y)
+    {
+        cout << "x is equal to y";
+    }
+
+    else
+    {
+        cout << "x is greater than y";
+    }
+    return 0;
+}
 int main(){
     sum(20,30);
     sub(20,30);
@@ -98,5 +115,6 @@ int main(){
     append("adil","shaik","mahammad");
     stringnum("7565","2343");
     length("bhfbdhsgchsgdhcbh","character","my name is\"adil\"and i am from\\proddatur\\in \'kadapa'");
+    statement(10,20);
     return 0;
 }
