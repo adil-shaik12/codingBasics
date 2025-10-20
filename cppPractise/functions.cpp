@@ -101,6 +101,35 @@ int statement(int x,int y)
     }
     return 0;
 }
+int switchStatement(int day)
+{
+    switch (day)
+    {
+    case 1:
+        cout << "monday";
+        break;
+    case 2:
+        cout << "tuesday";
+        break;
+    case 3:
+        cout << "wednesday";
+        break;
+    case 4:
+        cout << "thursday";
+        break;
+    case 5:
+        cout << "friday";
+        break;
+    case 6:
+        cout << "saturday";
+        break;
+    case 7:
+        cout << "sunday";
+        break;
+        return 0;
+    }
+    return 0;
+}
 int main(){
     sum(20,30);
     sub(20,30);
@@ -116,5 +145,6 @@ int main(){
     stringnum("7565","2343");
     length("bhfbdhsgchsgdhcbh","character","my name is\"adil\"and i am from\\proddatur\\in \'kadapa'");
     statement(10,20);
+    switchStatement(3);
     return 0;
 }
