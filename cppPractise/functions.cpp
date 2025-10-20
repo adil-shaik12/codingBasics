@@ -3,13 +3,28 @@
 #include <cmath>
 #include <vector>
 using namespace std;
-int arithmetic(int a,int b)
+int sum(int a,int b)
 {
-    
     cout << a + b << "\n";
+    return 0;
+}
+int sub(int a,int b)
+{
     cout << a - b << "\n";
+    return 0;
+}
+int multi(int a,int b)
+{
     cout << a * b << "\n";
+    return 0;
+}
+int divi(int a,int b)
+{
     cout << a / b << "\n";
+    return 0;
+}
+int mod(int a,int b)
+{
     cout << a % b << "\n";
     return 0;
 }
@@ -70,7 +85,11 @@ int length(string txt,string nm,string spe)
     return 0;
 }
 int main(){
-    arithmetic(20,30);
+    sum(20,30);
+    sub(20,30);
+    multi(2,6);
+    divi(20,2);
+    mod(21,2);
     assignment(10);
     comparison(10,20);
     logical(10,20);
