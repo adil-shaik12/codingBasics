@@ -130,6 +130,24 @@ int switchStatement(int day)
     }
     return 0;
 }
+int loop(int i)
+{
+    while (i < 10)
+    {
+        cout << i << "\n";
+        i++;
+    }
+    return 0;
+}
+int doWhile(int i)
+{
+    do
+    {
+        cout << i << "\n";
+        i++;
+    } while (i <= 10);
+    return 0;
+}
 int main(){
     sum(20,30);
     sub(20,30);
@@ -146,5 +164,7 @@ int main(){
     length("bhfbdhsgchsgdhcbh","character","my name is\"adil\"and i am from\\proddatur\\in \'kadapa'");
     statement(10,20);
     switchStatement(3);
+    loop(0);
+    doWhile(0);
     return 0;
 }
