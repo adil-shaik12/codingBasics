@@ -165,56 +165,66 @@ int forLoop(int i)
     }
     return 0;
 }
-int Func1(int x, int y) {
-  return x + y;
+int Func1(int x, int y)
+{
+    return x + y;
 }
-int Func2(int x, int y, int z) {
-  return x + y + z;
+int Func2(int x, int y, int z)
+{
+    return x + y + z;
 }
-//the below code is for swapping of numbers
-int swapNums(int &x,int &y){
-    int z=x;
-    x=y;
-    y=z;
+// the below code is for swapping of numbers
+int swapNums(int &x, int &y)
+{
+    int z = x;
+    x = y;
+    y = z;
     return 0;
 }
-//the below code is for recursion
-int sum(int n){
-    if(n==0){
+// the below code is for recursion
+int sum(int n)
+{
+    if (n == 0)
+    {
         return 0;
     }
-    return n+sum(n-1);
+    return n + sum(n - 1);
 }
-float toCelsius(float fahrenheit) {
-  return (5.0 / 9.0) * (fahrenheit - 32.0);
+float toCelsius(float fahrenheit)
+{
+    return (5.0 / 9.0) * (fahrenheit - 32.0);
 }
-int local(int xyz) {
-  xyz++;
-  cout << xyz;
-  return 0;
+int local(int xyz)
+{
+    xyz++;
+    cout << xyz;
+    return 0;
 }
 int xyz = 5;
-int global() {
-  xyz++;
-  cout << xyz<<"\n";
-  return 0;
+int global()
+{
+    xyz++;
+    cout << xyz << "\n";
+    return 0;
 }
-struct Car{
+struct Car
+{
     string brand;
     int year;
 };
-int updateYear(Car &c){
+int updateYear(Car &c)
+{
     c.year++;
     return 0;
 }
 int main()
 {
-    int a=10,b=20;
-    cout<<"before swapping"<<"\n";
-    cout<<a<<" "<<b<<"\n";
-    swapNums(a,b);
-    cout<<"after swapping"<<"\n";
-    cout<<a<<" "<<b;
+    int a = 10, b = 20;
+    cout << "before swapping" << "\n";
+    cout << a << " " << b << "\n";
+    swapNums(a, b);
+    cout << "after swapping" << "\n";
+    cout << a << " " << b;
     float f_value = 98.8;
     float result = toCelsius(f_value);
     cout << "Fahrenheit: " << f_value << "\n";
@@ -237,17 +247,17 @@ int main()
     loop(0);
     doWhile(0);
     forLoop(6);
-    cout<<Func1(10,20)<<"\n";
-    cout<<Func2(10,20,30)<<"\n";
-    cout<<sum(5);
+    cout << Func1(10, 20) << "\n";
+    cout << Func2(10, 20, 30) << "\n";
+    cout << sum(5);
     local(5);
     global();
     Car mycar;
-    mycar.brand="toyota";
-    mycar.year=2021;
-	updateYear( mycar);
-    cout<<mycar.year<<"\n";
-    cout<<mycar.brand;
- 
+    mycar.brand = "toyota";
+    mycar.year = 2021;
+    updateYear(mycar);
+    cout << mycar.year << "\n";
+    cout << mycar.brand;
+
     return 0;
 }
