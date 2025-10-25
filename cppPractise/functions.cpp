@@ -1,0 +1,263 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <vector>
+using namespace std;
+int sum(int a, int b)
+{
+    cout << a + b << "\n";
+    return 0;
+}
+int sub(int a, int b)
+{
+    cout << a - b << "\n";
+    return 0;
+}
+int multi(int a, int b)
+{
+    cout << a * b << "\n";
+    return 0;
+}
+int divi(int a, int b)
+{
+    cout << a / b << "\n";
+    return 0;
+}
+int mod(int a, int b)
+{
+    cout << a % b << "\n";
+    return 0;
+}
+int assignment(int x)
+{
+    x += 5;
+    x -= 1;
+    x *= 5;
+    x /= 3;
+    x %= 2;
+    cout << x;
+    return 0;
+}
+int comparison(int x, int y)
+{
+    cout << (x == y) << "\n";
+    cout << (x != y) << "\n";
+    cout << (x > y) << "\n";
+    cout << (x < y) << "\n";
+    cout << (x <= y) << "\n";
+    cout << (x >= y) << "\n";
+    return 0;
+}
+int logical(int x, int y)
+{
+    cout << (x < 12 && y > 20) << "\n";
+    cout << (x <= 10 || y < 20) << "\n";
+    cout << (x != 20);
+    return 0;
+}
+int name(string name)
+{
+    cout << "my name is:" << name;
+    return 0;
+}
+int concat(string fname, string sname, string tname)
+{
+    cout << fname << " " + sname << " " + tname;
+    return 0;
+}
+int append(string fname, string sname, string tname)
+{
+    fname.append(sname).append(tname);
+    cout << fname;
+    return 0;
+}
+int stringnum(string a, string b)
+{
+    a = a + b;
+    cout << a;
+    return 0;
+}
+int length(string txt, string nm, string spe)
+{
+    cout << txt.size() << "\n";
+    cout << nm[0] << "\n";
+    cout << spe << "\n";
+    return 0;
+}
+int statement(int x, int y)
+{
+    if (x < y)
+    {
+        cout << "x is lessthan y";
+    }
+    else if (x <= y)
+    {
+        cout << "x is equal to y";
+    }
+
+    else
+    {
+        cout << "x is greater than y";
+    }
+    return 0;
+}
+int switchStatement(int day)
+{
+    switch (day)
+    {
+    case 1:
+        cout << "monday";
+        break;
+    case 2:
+        cout << "tuesday";
+        break;
+    case 3:
+        cout << "wednesday";
+        break;
+    case 4:
+        cout << "thursday";
+        break;
+    case 5:
+        cout << "friday";
+        break;
+    case 6:
+        cout << "saturday";
+        break;
+    case 7:
+        cout << "sunday";
+        break;
+        return 0;
+    }
+    return 0;
+}
+int loop(int i)
+{
+    while (i < 10)
+    {
+        cout << i << "\n";
+        i++;
+    }
+    return 0;
+}
+int doWhile(int i)
+{
+    do
+    {
+        cout << i << "\n";
+        i++;
+    } while (i <= 10);
+    return 0;
+}
+int forLoop(int i)
+{
+    for (i = 0; i <= 10; i++)
+    {
+        if (i = 0)
+        {
+            cout << "the value is 0";
+        }
+        if (i = 1)
+        {
+            cout << "the value is 1";
+        }
+        cout << i << "\n";
+        return 0;
+    }
+    return 0;
+}
+int Func1(int x, int y)
+{
+    return x + y;
+}
+int Func2(int x, int y, int z)
+{
+    return x + y + z;
+}
+// the below code is for swapping of numbers
+int swapNums(int &x, int &y)
+{
+    int z = x;
+    x = y;
+    y = z;
+    return 0;
+}
+// the below code is for recursion
+int sum(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    return n + sum(n - 1);
+}
+float toCelsius(float fahrenheit)
+{
+    return (5.0 / 9.0) * (fahrenheit - 32.0);
+}
+int local(int xyz)
+{
+    xyz++;
+    cout << xyz;
+    return 0;
+}
+int xyz = 5;
+int global()
+{
+    xyz++;
+    cout << xyz << "\n";
+    return 0;
+}
+struct Car
+{
+    string brand;
+    int year;
+};
+int updateYear(Car &c)
+{
+    c.year++;
+    return 0;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "before swapping" << "\n";
+    cout << a << " " << b << "\n";
+    swapNums(a, b);
+    cout << "after swapping" << "\n";
+    cout << a << " " << b;
+    float f_value = 98.8;
+    float result = toCelsius(f_value);
+    cout << "Fahrenheit: " << f_value << "\n";
+    cout << "Convert Fahrenheit to Celsius: " << result << "\n";
+    sum(20, 30);
+    sub(20, 30);
+    multi(2, 6);
+    divi(20, 2);
+    mod(21, 2);
+    assignment(10);
+    comparison(10, 20);
+    logical(10, 20);
+    name("mahammad");
+    concat("adil", "shaik", "mahammad");
+    append("adil", "shaik", "mahammad");
+    stringnum("7565", "2343");
+    length("bhfbdhsgchsgdhcbh", "character", "my name is\"adil\"and i am from\\proddatur\\in \'kadapa'");
+    statement(10, 20);
+    switchStatement(3);
+    loop(0);
+    doWhile(0);
+    forLoop(6);
+    cout << Func1(10, 20) << "\n";
+    cout << Func2(10, 20, 30) << "\n";
+    cout << sum(5);
+    local(5);
+    global();
+    Car mycar;
+    mycar.brand = "toyota";
+    mycar.year = 2021;
+    updateYear(mycar);
+    cout << mycar.year << "\n";
+    cout << mycar.brand;
+
+    return 0;
+}

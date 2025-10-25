@@ -194,6 +194,7 @@ int statement()
     {
         cout << "x is greater than y";
     }
+    return 0;
 }
 // the below code is for switch statement
 int switchStatement()
@@ -224,6 +225,7 @@ int switchStatement()
         break;
         return 0;
     }
+    return 0;
 }
 // the below code is for while and do/while loop
 int loop()
@@ -234,6 +236,7 @@ int loop()
         cout << i << "\n";
         i++;
     }
+    return 0;
 }
 int doWhile()
 {
@@ -276,6 +279,7 @@ int forLoop()
         }
         cout << i << "/n";
     }
+    return 0;
 }
 // the below code is for arrays
 int arrayForloop()
