@@ -56,6 +56,7 @@ void deleteAtend(){
     while(helperpointer->next->next!=NULL){
         helperpointer=helperpointer->next;
     }
+    helperpointer->next=NULL;
 }
 void deleteAtposition(int pos){
     struct node* current=head;
@@ -64,6 +65,25 @@ void deleteAtposition(int pos){
     }
     struct node* notetodelete=current->next;
     current->next=notetodelete->next;
+}
+void getheadelement(){
+    cout<<"headelement"<<head->data<<"\n";
+}
+void getendelement(){
+    struct node* helperpointer=head;
+    while(helperpointer->next!=NULL){
+        helperpointer=helperpointer->next;
+    }
+    cout<<"endelement:"<<helperpointer->data<<"\n";
+}
+void getmiddleelement(){
+    struct node* spointer=head;
+    struct node* fpointer=head;
+    while(fpointer!=NULL && fpointer->next!=NULL ){
+        spointer=spointer->next;
+        fpointer=fpointer->next->next;
+    }
+    cout<<"middel element:"<<spointer->data<<"\n";
 }
 void display()
 {
@@ -107,5 +127,8 @@ int main()
     deleteAtposition(5);
     cout << "deletedatposition:" << "\n";
     display();
+    getheadelement();
+    getendelement();
+    getmiddleelement();
     return 0;
 }
