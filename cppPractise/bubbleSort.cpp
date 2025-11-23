@@ -16,6 +16,22 @@ void bsort(vector<int>& arr){
         }
     }
 }
+void bSort1(vector<int>& arr){
+    int n=arr.size();
+    bool swapped;
+    for(int i=0;i<n-1;i++){
+        swapped=false;
+        for(int j=0;j<n-i-1;j++){
+            if(arr[j]<arr[j+1]){
+                swap(arr[j],arr[j+1]);
+                swapped=true;
+            }
+        }
+        if(!swapped){
+            break;
+        }
+    }
+}
 void display(vector<int>& arr){
     for(int i=0;i<arr.size();i++){
         cout<<arr[i]<<"\n";
@@ -27,6 +43,11 @@ int main(){
     display(arr);
     bsort(arr);
     cout<<"after sorting"<<"\n";
+    display(arr);
+    cout<<"before sorting"<<"\n";
+    display(arr);
+    bSort1(arr);
+    cout<<"after soritng"<<"\n";
     display(arr);
     return 0;
 }
