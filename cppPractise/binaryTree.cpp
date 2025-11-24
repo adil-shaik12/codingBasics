@@ -39,7 +39,7 @@ void postorder(node *node)
         return;
     }
     postorder(node->left);
-    postorder(node->right);
+    postorder(node->right);  
     cout << node->data;
 }
 int main()
