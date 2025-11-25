@@ -80,10 +80,19 @@ bool search(node* root,int key){
     }
     return search(root->left, key) ||search(root->right,key);
 }
+node* clone(node* root){
+    if(root==NULL){
+        return 0;  
+    }
+    node* new_node=new node(root->data);
+    new_node->left=clone(root->left);
+    new_node->right=clone(root->right);
+    return new_node;
+}
 int main(){
     struct node* root=new node(2);
     root->left=new node(3);
-    root->right=new node(4);
+    root->right=new node(4);  
     root->left->left=new node(5);
     root->left->right=new node(6);
     insert(root,7);
@@ -93,10 +102,13 @@ int main(){
     cout<<count(root);
     cout<<"\n";
     bool search6 = search(root,6);
-    cout<<search6;
+    cout<<search6<<"\n";
     if(search6){
         cout<<"we have the element in the tree"<<"\n";
     }
     else cout<<"there is no key"<<"\n";
+    node* cloneroot=clone(root);
+    cout<<"cloned tree is:"<<"\n";
+    levelorder(cloneroot);
     return 0;
 }
