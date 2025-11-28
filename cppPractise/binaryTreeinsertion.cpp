@@ -89,6 +89,69 @@ node* clone(node* root){
     new_node->right=clone(root->right);
     return new_node;
 }
+
+
+void deletedeepest(node* root,node* delnode){
+    if(root==NULL){
+        return;
+    }
+    if(root == delnode){
+        delete root;
+        return;
+    }
+    if(root->right){
+        if(root->right==delnode){
+            delete root->right;
+            root->right=NULL;
+            return;
+        }
+        deletedeepest(root->right,delnode);
+    }
+    if(root->left){
+        if(root->left==delnode){
+            delete root->left;
+            root->left=NULL;
+            return;
+        }
+        deletedeepest(root->left,delnode);    
+    }
+}
+
+node* deleteBstNode(node* root,int val){
+    if(root==NULL){
+        return NULL;
+    }
+    if(root->left==NULL && root->right==NULL){
+        if(root->data==val){
+            delete root;
+            return NULL;
+        }
+        return root;
+    }
+    queue<node*>q;
+    q.push(root);
+    node* temp=NULL;
+    node* nodetodelete=NULL;
+    while(!q.empty()){
+        temp=q.front();
+        q.pop();
+        if(temp->data==val){
+            nodetodelete=temp;
+        }
+        if(temp->left!=NULL){
+            q.push(temp->left);
+        }
+        if(temp->right!=NULL){
+            q.push(temp->right);
+        }
+    }
+    if(nodetodelete!=NULL){
+        int deepestVal = temp-> data;    
+        nodetodelete->data=deepestVal;
+        deletedeepest(root,temp);
+    }
+    return root;
+}
 int main(){
     struct node* root=new node(2);
     root->left=new node(3);
@@ -110,5 +173,8 @@ int main(){
     node* cloneroot=clone(root);
     cout<<"cloned tree is:"<<"\n";
     levelorder(cloneroot);
+    node* afterDeletion = deleteBstNode(root, 3);
+    cout << "after deletion:" << "\n";
+    levelorder(afterDeletion);
     return 0;
 }
