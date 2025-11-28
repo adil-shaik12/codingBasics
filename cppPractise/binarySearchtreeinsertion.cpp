@@ -88,6 +88,50 @@ node *clone(node *root)
     new_node->right = clone(root->right);
     return new_node;
 }
+bool isbst(node *root, int min, int max)
+{
+    if (root == NULL)
+    {
+        return true;
+    }
+    return isbst(root->left, min, root->data) &&
+           isbst(root->right, root->data, max);
+}
+
+node* min(node* root){
+    node* current=root;
+    while(current && current->left!=NULL){
+        current=current->left;
+    }
+    return current;
+}
+node* deleteBstNode(node* root,int val){
+    if(root==NULL){
+        return NULL;
+    }
+    if(val<root->data){
+        root->left=deleteBstNode(root->left,val);
+    }
+    else if(val>root->data){
+        root->right=deleteBstNode(root->right,val);
+    }
+    else{
+        if(root->left==NULL){
+            node* temp=root->right;
+            delete root;
+            return temp;
+        }
+        else if(root->right==NULL){
+            node* temp=root->left;
+            delete root;
+            return temp;
+        }
+        node* temp=min(root->right);
+        root->data=temp->data;
+        root->right=deleteBstNode(root->right,temp->data);
+    }
+    return root;
+}
 void inorder(node *root)
 {
     if (root == NULL)
@@ -126,5 +170,16 @@ int main()
     cout << "cloned tree is:" << "\n";
     levelorder(cloneroot);
     cout << "\n";
+    node *isbst(root);
+    if (isbst)
+    {
+        cout << "tree is bst" << "\n";
+    }
+    else{
+        cout << "tree is not bst" << "\n";
+    }
+    node* afterDeletion=deleteBstNode(root,3);
+    cout<<"after deletion:"<<"\n";
+    levelorder(afterDeletion);
     return 0;
 }
